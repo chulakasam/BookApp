@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Digital Book Search</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+    <h1>Search for Books</h1>
+    <input type="text" id="query" placeholder="Search for books..." />
+    <button onclick="searchBooks()">Search</button>
 
+    <div id="loading" class="hidden">Loading...</div>
+
+    <div id="book-list" class="book-list"></div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
