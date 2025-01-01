@@ -1,65 +1,121 @@
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #87CEEB;
     margin: 0;
     padding: 0;
+    color: #333;
 }
+
 
 .container {
     width: 80%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    background-color:#B0E0E6;
+    border-radius: 10px;
 }
+
 
 h1 {
     text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
+
 
 input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 30%;
-    margin-left: 35%;
+    padding: 15px;
+    font-size: 18px;
+    width: 40%;
+    margin-left: 30%;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+    transition: all 0.3s ease-in-out;
 }
 
+input[type="text"]:focus {
+    outline: none;
+    border-color: #2980b9;
+    background-color: #ffffff;
+}
+
+
 button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
-    background-color: cornflowerblue;
-    border-radius: 20px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background-color: #2980b9;
+    transform: scale(1.05);
 }
 
 button:active {
     background-color: #1c6f99;
+    transform: scale(1);
 }
+
+
 #book-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-left: 60px;
-    background: cadetblue;
+    justify-content: center;
+    margin-top: 30px;
 }
 
+
 .book-item {
-    background-color: white;
+    background-color: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 250px;
-    margin: 10px;
-    padding: 10px;
+    margin: 15px;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
 }
 
 .book-item img {
     max-width: 100%;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
+
+
+.book-item h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+
+.book-item p {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
 
 .hidden {
     display: none;
