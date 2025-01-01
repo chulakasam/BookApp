@@ -18,11 +18,8 @@ function searchBooks(){
                 bookList.innerHTML = "<p>No books found.</p>";
             } else {
                 data.forEach(book => {
-                    const bookItem = document.createElement("div");
-                    bookItem.classList.add("book-item");
-
-
-
+                    const bookDetails = document.createElement("div");
+                    bookDetails.classList.add("book-item");
 
 
                     //  null checks to avoid undefine errors
@@ -32,7 +29,7 @@ function searchBooks(){
                     const imageUrl = book.volumeInfo?.imageLinks?.thumbnail || '';
                     const infoLink = book.volumeInfo?.infoLink || "#";
 
-                    bookItem.innerHTML = `
+                    bookDetails.innerHTML = `
                           <img src="${imageUrl}" alt="${title}" />
                           <h3>${title}</h3>
                           <p>By: ${authors}</p>
@@ -40,7 +37,7 @@ function searchBooks(){
                           <a href="${infoLink}" target="_blank">More Info</a>
                     `;
 
-                    bookList.appendChild(bookItem);
+                    bookList.appendChild(bookDetails);
                 });
             }
         })
